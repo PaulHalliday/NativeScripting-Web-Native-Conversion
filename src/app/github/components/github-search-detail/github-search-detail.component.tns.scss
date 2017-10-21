@@ -1,0 +1,23 @@
+CardView {
+
+  background-color: #fff;
+  color: black; 
+  margin: 10;
+
+  image {
+    width: 200;
+    height: 200;
+    margin: auto;
+  }
+
+  stacklayout {
+    padding: 20;
+  }
+
+  label {
+    margin: 10;
+    font-size: 20;
+    text-align:center;
+  }
+
+}

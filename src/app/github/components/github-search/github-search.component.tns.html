@@ -1,0 +1,8 @@
+<ActionBar title="Search"></ActionBar>
+
+<StackLayout>
+  <Label text="Username"></Label>
+  <TextField hint="PaulHalliday" [(ngModel)]="username"></TextField>
+
+  <Button text="Search" class="btn btn-primary" [nsRouterLink]="[username]"></Button>
+</StackLayout>

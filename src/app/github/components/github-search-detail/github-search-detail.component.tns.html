@@ -1,0 +1,21 @@
+<ActionBar title="Detail"></ActionBar>
+
+<ScrollView>
+  <StackLayout>
+    <CardView elevation="40" radius="1" *ngIf="userInformation$ | async as user; else loading">
+      <StackLayout>
+        <Image [src]="user.avatar_url"></Image>
+        <Label text="Name: {{user.name}}" textWrap="true"></Label>
+        <Label text="Company: {{user.company}}" textWrap="true"></Label>
+        <Label text="Blog: {{user.blog}}" textWrap="true"></Label>
+        <Label text="Bio: {{user.bio}}" textWrap="true"></Label>
+      </StackLayout>
+    </CardView>
+
+    <Button text="Back" nsRouterLink=""></Button>
+  </StackLayout>
+</ScrollView>
+
+<ng-template #loading>
+  <Label text="Loading..."></Label>
+</ng-template>

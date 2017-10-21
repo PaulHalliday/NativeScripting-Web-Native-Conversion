@@ -1,12 +1,8 @@
 import { AppRoutingModule } from './app-routing.module';
 // demo
-import { HomeModule } from './home/home.module';
-import { MenuModule } from './menu/menu.module';
 
-export const SHARED_MODULES: any[] = [
-    AppRoutingModule,
-    HomeModule,
-    MenuModule
-];
+import { GithubModule } from './github/github.module';
+
+export const SHARED_MODULES: any[] = [AppRoutingModule, GithubModule];
 
 export * from './app-routing.module';

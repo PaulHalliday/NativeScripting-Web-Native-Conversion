@@ -1,0 +1,22 @@
+<mat-toolbar>
+  Detail
+</mat-toolbar>
+
+<div fxLayout="column" fxLayoutAlign="center center" *ngIf="userInformation$ | async as user; else loading">
+  <mat-card>
+    <mat-card-header>
+      <img [src]="user.avatar_url" alt="">
+    </mat-card-header>
+    <mat-card-content>
+      <p>Name: {{user.name}}</p>
+      <p>Company: {{user.company}}</p>
+      <p>Blog: {{user.blog}}</p>
+      <p>Bio: {{user.bio}}</p>
+    </mat-card-content>
+  </mat-card>
+  <button mat-button routerLink="">Back</button>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

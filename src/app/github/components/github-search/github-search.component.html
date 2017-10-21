@@ -1,0 +1,13 @@
+<mat-toolbar>
+  Search
+</mat-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="75%">
+    <mat-form-field>
+      <input type="text" matInput placeholder="GitHub Username" [(ngModel)]="username">
+    </mat-form-field>
+
+    <button mat-raised-button [routerLink]="[username]">Search</button>
+  </div>
+</div>
